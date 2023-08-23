@@ -1,2 +1,11 @@
-<h1>StaticPages#index</h1>
-<p>Find me in app/views/static_pages/index.html.erb</p>
+<h1>StaticPages</h1>
+
+<%= form_with method: 'get' do |form| %>
+  <%= form.label :user_id, 'User-id:' %>
+  <%= form.text_field :user_id %>
+  <%= form.submit 'Search' %>
+<% end %>
+
+<% @imgs.each do |url| %>
+  <img src=<%= url %>>
+<% end %>
